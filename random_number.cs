@@ -55,12 +55,17 @@ namespace _19._02._19_lesson_3
                 if (inpt > nrnd) { Console.WriteLine($"Your guess is less than {nrnd}, please try again "); }
                 if (inpt < nrnd) { Console.WriteLine($"Your guess is more than {nrnd}, please try again "); }
 
+               //Console.Write( (inpt < nrnd && inpt != nrnd) ? $"Your guess is less than {nrnd}, please try again " : $"Your guess is more than {nrnd}, please try again");
+
+                //string a = (inpt < nrnd && inpt != nrnd) ? $"Your guess is less than {nrnd}, please try again " : $"Your guess is more than {nrnd}, please try again";
+
+
 
             }
 
             while (inpt != nrnd);
-
-            Console.WriteLine();
+//
+            Console.WriteLine("Yor guess is just right!");
 
 
 
