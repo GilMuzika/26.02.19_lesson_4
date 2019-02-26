@@ -26,7 +26,7 @@ namespace _19._02._19_lesson_3
                 int rndcomputercard = engine.Next(2, 15);
                // get new card
 
-                PrintWhoWon(BodyOfTheGame(rndmycard), BodyOfTheGame(rndcomputercard));
+                PrintWhoWon(BodyOfTheGame(rndmycard), BodyOfTheGame(rndcomputercard), ref myscore, ref compscore);
             }
 
           
@@ -34,7 +34,7 @@ namespace _19._02._19_lesson_3
 
 
 
-        static void PrintWhoWon(int mycard, int computercard)
+        static void PrintWhoWon(int mycard, int computercard, ref int myscore, ref int compscore)
         {
             if (mycard > computercard)
             {
@@ -48,6 +48,8 @@ namespace _19._02._19_lesson_3
             {
                 Console.WriteLine("Tie!");
             }
+
+
         }
 
 
