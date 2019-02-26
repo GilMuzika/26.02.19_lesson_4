@@ -48,13 +48,14 @@ namespace _19._02._19_lesson_3
             int nrnd = eng.Next(100) + 1;
 
             int inpt;
-
+            int count = 1;
             do
             {
                 inpt = Convert.ToInt32(Console.ReadLine());
-                if (inpt > nrnd) { Console.WriteLine($"Your guess is less than {nrnd}, please try again "); }
-                if (inpt < nrnd) { Console.WriteLine($"Your guess is more than {nrnd}, please try again "); }
+                if (inpt > nrnd) { Console.WriteLine($"You guessed {count} times and your guess is less than {nrnd}, please try again "); }
+                if (inpt < nrnd) { Console.WriteLine($"You guessed {count} times and your guess is more than {nrnd}, please try again "); }
 
+                count++;
                //Console.Write( (inpt < nrnd && inpt != nrnd) ? $"Your guess is less than {nrnd}, please try again " : $"Your guess is more than {nrnd}, please try again");
 
                 //string a = (inpt < nrnd && inpt != nrnd) ? $"Your guess is less than {nrnd}, please try again " : $"Your guess is more than {nrnd}, please try again";
