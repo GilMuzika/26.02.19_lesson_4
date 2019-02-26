@@ -12,6 +12,7 @@ namespace _19._02._19_lesson_3
         static void Main(string[] args)
         {
             
+            
             Random engine = new Random();
 
             // get new card
@@ -21,35 +22,32 @@ namespace _19._02._19_lesson_3
             while (compscore != 5 && myscore != 5)
             {
                 int rndmycard = engine.Next(2, 15);
-                // print card
-                int mycard = BodyOfTheGame(rndmycard);
                // get new card
                 int rndcomputercard = engine.Next(2, 15);
-                int computercard = BodyOfTheGame(rndcomputercard);
-                // print card
+               // get new card
 
-
-
-                if (mycard > computercard)
-                {
-                   myscore++; Console.WriteLine($"I won this round!!!! My score is {myscore}"); 
-                }
-                else if (computercard > mycard)
-                {
-                   compscore++; Console.WriteLine($"Computer won ... booooo. Computer's score is {compscore}");  
-                }
-                else
-                {
-                    Console.WriteLine("Tie!");
-                }
-
-
+                PrintWhoWon(BodyOfTheGame(rndmycard), BodyOfTheGame(rndcomputercard));
             }
 
-            
-
           
-          //  NumNum();
+        }
+
+
+
+        static void PrintWhoWon(int mycard, int computercard)
+        {
+            if (mycard > computercard)
+            {
+                myscore++; Console.WriteLine($"I won this round!!!! My score is {myscore}");
+            }
+            else if (computercard > mycard)
+            {
+                compscore++; Console.WriteLine($"Computer won ... booooo. Computer's score is {compscore}");
+            }
+            else
+            {
+                Console.WriteLine("Tie!");
+            }
         }
 
 
@@ -92,15 +90,6 @@ namespace _19._02._19_lesson_3
             return card;
 
         }
-
-        
-
-      //  static void NumNum ()
-      /*  {
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(n*10);
-
-        }*/
 
 
     }
